@@ -2,7 +2,7 @@
  * @Author: Tensho Chen 
  * @Date: 2017-01-13 01:09:38 
  * @Last Modified by: Tensho Chen
- * @Last Modified time: 2017-03-24 19:16:47
+ * @Last Modified time: 2017-03-25 00:13:37
  */
 
 // 启动mongoDB :mongod -dbpath ./db
@@ -29,7 +29,7 @@ app.use('/api', apiRouter);
 
 //错误页面处理，重定向
 app.get('*', function (req, res) {
-	res.redirect('/u');
+  res.redirect('/u');
 });
 
 //监听端口
