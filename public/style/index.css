@@ -1,0 +1,188 @@
+/*主页样式*/
+
+body,
+p,
+h1,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', 'Microsoft YaHei';
+}
+
+.clearfix:after {
+  content: '.';
+  height: 0;
+  display: block;
+  visibility: hidden;
+  overflow: hidden;
+  clear: both;
+}
+
+.bgarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.contentarea {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFFFFF
+}
+
+.greeting {
+  margin-bottom: 40px;
+  font-size: 90px;
+  font-weight: normal;
+}
+
+.inputgreeting {
+  margin-bottom: 40px;
+  font-size: 90px;
+  font-weight: normal;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  outline: none;
+  border: 0;
+  border-bottom: 3px solid #fff;
+}
+
+.centertext {
+  margin-bottom: 10px;
+}
+
+
+/*日历样式*/
+
+.calendar-wrapper {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 235px;
+  height: 113px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.calendar-animate,
+.calendar-wrapper:hover {
+  width: 359px;
+  height: 484px;
+}
+
+.calendar {
+  width: 359px;
+  height: 493px;
+  margin: 0 auto;
+  background: #2d2d32;
+}
+
+.caltop {
+  height: 65px;
+  padding: 24px 20px;
+}
+
+.calmain {
+  width: 359px;
+  padding-bottom: 20px;
+  border-top: 1px solid #655b58;
+  overflow: hidden;
+}
+
+.caltime {
+  height: 40px;
+  margin: 0 0 15px -5px;
+  line-height: 40px;
+  font-size: 50px;
+  color: #fff;
+  font-family: '微软雅黑';
+}
+
+.caldate {
+  line-height: 15px;
+  font-size: 15px;
+  color: #ff9859;
+}
+
+.calmainTop {
+  height: 46px;
+  line-height: 46px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.calmainTop span {
+  display: inline-block;
+}
+
+.calmainTop span:nth-child(1) {
+  width: 240px;
+  padding-left: 24px;
+}
+
+.calmainTop span:nth-child(2) {
+  margin-right: 30px;
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.calmainTop span:nth-child(3) {
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.callist {
+  padding-left: 12px;
+}
+
+.callist span {
+  float: left;
+  width: 38px;
+  height: 32px;
+  margin: 3px;
+  line-height: 32px;
+  border: 2px solid #2d2d32;
+  text-align: center;
+  color: #fff;
+}
+
+.callist .caldatebox span:hover {
+  outline: 2px solid rgba(255, 255, 255, .5);
+}
+
+.calbigdatebox {
+  height: 252px;
+  overflow: hidden;
+}
+
+.caldatebox {
+  position: relative;
+}
+
+.callist .caldatebox #current {
+  outline: 2px solid #ff9859;
+  border-color: #000;
+  background: #ff9859;
+}
+
+.callist .caldatebox #active {
+  outline: 2px solid #FFB88D;
+}
+
+.callist .caldatebox .dark {
+  color: rgba(255, 255, 255, .5);
+}

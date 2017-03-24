@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    <%=title + ' :) - Have a nice day!'%>
+  </title>
+  <link rel="icon" href="../img/favicon-32px.png" type="image/x-icon">
+  <link rel="stylesheet" href="../style/index.css">
+</head>
+
+<body>
+
+  <div class="bgarea" data-img='<%=bingurl%>'></div>
+  <div class="contentarea">
+    <input class="inputgreeting" type="text" value='输入昵称，定制你的页面'>
+    <p class="centertext">
+      <%=cnSaying%>
+    </p>
+    <p class="centertext">
+      <%=enSaying%>
+    </p>
+  </div>
+
+  <div class="calendar-wrapper">
+    <div class="calendar">
+      <div class="caltop">
+        <p class="caltime"></p>
+        <p class="caldate"></p>
+      </div>
+      <div class="calmain">
+        <p class="calmainTop">
+          <span>2017年1月</span>
+          <span>></span>
+          <span>></span>
+        </p>
+        <div class="callist">
+          <div class="clearfix">
+            <span>一</span>
+            <span>二</span>
+            <span>三</span>
+            <span>四</span>
+            <span>五</span>
+            <span>六</span>
+            <span>日</span>
+          </div>
+          <div class="calbigdatebox">
+            <div class="caldatebox clearfix">
+            </div>
+            <div class="caldatebox clearfix">
+            </div>
+            <div class="caldatebox clearfix">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" , src="../js/index.js"></script>
+
+  <script>
+    var bgarea = document.getElementsByClassName('bgarea')[0];
+    bgarea.style.backgroundImage = 'url(' + bgarea.dataset.img + ')';
+
+    var inputEle = document.getElementsByClassName('inputgreeting')[0];
+    inputEle.focus();
+    inputEle.onclick = function () {
+      inputEle.value = '';
+    };
+    inputEle.onblur = function () {
+      handler();
+    };
+    inputEle.onkeydown = function (ev) {
+      var e = ev || window.event;
+      if (inputEle.value === '输入昵称，定制你的页面') inputEle.value = '';
+      if (e && e.keyCode == 13) {
+        handler();
+      }
+    };
+
+    function handler() {
+      if (!inputEle.value || inputEle.value === '输入昵称，定制你的页面') return inputEle.value = '输入昵称，定制你的页面';
+      window.location.href = 'u/' + inputEle.value;
+    }
+  </script>
+
+</body>
+
+</html>
