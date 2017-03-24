@@ -2,14 +2,14 @@
  * @Author: Tensho Chen 
  * @Date: 2017-03-23 21:24:46 
  * @Last Modified by: Tensho Chen
- * @Last Modified time: 2017-03-24 20:03:14
+ * @Last Modified time: 2017-03-25 00:11:01
  */
 
 
 var RestResult = function(){
-	this.errorCode = RestResult.NO_ERROR ;
-	this.returnValue = {};
-	this.errorReason = '';
+  this.errorCode = RestResult.NO_ERROR ;
+  this.returnValue = {};
+  this.errorReason = '';
 };
 
 RestResult.NO_ERROR = 0;//无错误
